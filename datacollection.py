@@ -3,6 +3,8 @@ import requests
 import datetime
 import spacy
 import ssl
+import os
+from dotenv import load_dotenv
 from db_connect import get_database
 import numpy as np
 from geopy.geocoders import Nominatim
@@ -10,7 +12,7 @@ from geopy.exc import GeocoderTimedOut
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 
-NEWSAPI_KEY = '55996ab5fc8f4c539351b9a1b1c18b0d'
+NEWSAPI_KEY = os.getenv("NEWSAPI_KEY")
 NEWSAPI_ENDPOINT = 'https://newsapi.org/v2/everything'
 
 disaster_keywords = ['earthquake', 'flood', 'tsunami', 'hurricane', 'wildfire', 'forestfire', 'tornado', 'cyclone', 'volcano', 'drought', 'landslide', 'storm', 'blizzard', 'avalanche', 'heatwave']

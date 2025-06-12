@@ -5,6 +5,8 @@ from firebase_admin import exceptions as firebase_exceptions
 from firebase_admin import firestore
 import smtplib
 import ssl
+import os
+from dotenv import load_dotenv
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
@@ -17,8 +19,8 @@ if not firebase_admin._apps:
 db = firestore.client()
 
 def send_email(email):
-    email_sender = 'harshith.savanur01@gmail.com'
-    email_password = 'iphd abzd gmgr scbq'
+    email_sender = os.getenv("EMAIL_SENDER")
+    email_password = os.getenv("EMAIL_PASSWORD")
     email_receiver = email
     subject = "Welcome to Geo-Spatial Visualization for Disaster Monitoring"
 
