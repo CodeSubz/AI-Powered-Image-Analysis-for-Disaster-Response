@@ -9,7 +9,6 @@
 import numpy as np
 import pandas as pd
 import re
-get_ipython().run_line_magic('matplotlib', 'inline')
 import seaborn as sns
 import matplotlib.pyplot as plt
 from imblearn.over_sampling import RandomOverSampler
@@ -111,6 +110,7 @@ plt.show()
 
 # Visualizing correlation HeatMap for Numerical features
 plt.figure(figsize=(16, 10))
+correlation_matrix = data.select_dtypes(include=[np.number]).corr()
 correlation_matrix = data.corr()
 sns.heatmap(correlation_matrix, annot=True, cmap='magma', fmt='.2f')
 
@@ -210,6 +210,7 @@ filtered_data = data[non_single_valued_columns]
 
 # Visualizing correlation HeatMap for Numerical features
 plt.figure(figsize=(16, 10))
+correlation_matrix = data.select_dtypes(include=[np.number]).corr()
 correlation_matrix = filtered_data.corr()
 sns.heatmap(correlation_matrix, annot= False, cmap='magma')
 
