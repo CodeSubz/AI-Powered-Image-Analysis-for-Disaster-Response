@@ -4,8 +4,8 @@ st.set_page_config(layout="wide")
 # Set up the navigation menu
 selected = option_menu(
     menu_title="", 
-    options=["Home","Classify","Insight", "About","Precausion","Login","Alerts","Prone Area"],
-    icons=["house","bell", "globe", "info","7-circle","key", "map"],
+    options=["Home", "Classify", "Prone Area", "Insight", "About", "Precausion", "Login", "Alerts", "About"],
+    icons=["house", "camera", "map", "info-circle", "bar-chart", "box-arrow-in-right", "exclamation-triangle", "bar-chart", "shield"],
     orientation="horizontal"
 )
 
