@@ -4,8 +4,8 @@ st.set_page_config(layout="wide")
 # Set up the navigation menu
 selected = option_menu(
     menu_title="", 
-    options=["Home","Classify","Insight", "About","Precausion","Login","Alerts"],
-    icons=["house","bell", "globe", "info","7-circle","key"],
+    options=["Home","Classify","Insight", "About","Precausion","Login","Alerts","Prone Area"],
+    icons=["house","bell", "globe", "info","7-circle","key", "map"],
     orientation="horizontal"
 )
 
@@ -15,6 +15,9 @@ if selected == "Alerts":
     import alerts
     alerts.main()
     
+elif selected == "Prone Area":
+    import prone_area
+    prone_area.main()
 
 elif selected == "Login":
     # Run the login.py script

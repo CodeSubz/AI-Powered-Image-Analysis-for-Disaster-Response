@@ -214,3 +214,4 @@ st.caption("""
 **Data Sources:** World Risk Index Report • Global Disaster Database  
 **Predictive Model:** Random Forest Classifier • Accuracy: 95.3%
 """)
+
